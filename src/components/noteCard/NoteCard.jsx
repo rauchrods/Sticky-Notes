@@ -75,6 +75,7 @@ const NoteCard = ({ note }) => {
         className="card-header"
         style={{ backgroundColor: colors.colorHeader }}
         onMouseDown={mouseDown}
+        onDrag={mouseDown}
       >
         <div className="delete-btn" onClick={deleteCardHandler}>
           <Trash />
