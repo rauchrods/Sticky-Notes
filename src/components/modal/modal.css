@@ -1,6 +1,6 @@
 .modal-wrapper {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.7);
   /* filter: blur(5px); */
   /* -webkit-filter: blur(8px); */
   top: 0;
@@ -15,6 +15,7 @@
   .modal-content {
     cursor: pointer;
     border-radius: 25px;
+    max-width: 80%;
     h2,
     p {
       margin: 0;

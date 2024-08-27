@@ -3,22 +3,7 @@ import { useSelector } from "react-redux";
 import "./modal.css";
 import { createPortal } from "react-dom";
 
-const links = [
-  {
-    href: "https://rauchrodrigues.vercel.app/",
-    text: "My Portfolio",
-  },
-  {
-    href: "https://github.com/rauchrods",
-    text: "Github Profile",
-  },
-  {
-    href: "https://www.instagram.com/raudricks1508/",
-    text: "Follow me on Instagram",
-  },
-];
-
-const Modal = () => {
+const Modal = ({ children }) => {
   const activeColor = useSelector((state) => state.main.activeColor);
 
   return createPortal(
@@ -40,21 +25,7 @@ const Modal = () => {
           className="modal-body"
           style={{ backgroundColor: activeColor.colorBody }}
         >
-          <ul>
-            {links.map((link) => (
-              <div>
-                <li>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    style={{ color: activeColor.colorText }}
-                  >
-                    {link.text}
-                  </a>
-                </li>
-              </div>
-            ))}
-          </ul>
+          {children}
         </div>
       </div>
     </div>,

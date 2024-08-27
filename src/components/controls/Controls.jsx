@@ -5,7 +5,6 @@ import ColorOption from "../colorOption/ColorOption";
 import "./controls.css";
 import { addNotes } from "../../slice/mainSlice";
 import { setZIndex } from "../../utils";
-import { useRef } from "react";
 
 const Controls = () => {
   const dispatch = useDispatch();
