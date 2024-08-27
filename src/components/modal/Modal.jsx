@@ -10,7 +10,7 @@ const links = [
   },
   {
     href: "https://github.com/rauchrods",
-    text: "Profile",
+    text: "Github Profile",
   },
   {
     href: "https://www.instagram.com/raudricks1508/",
