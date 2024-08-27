@@ -9,12 +9,12 @@
   transform: translateY(-50%);
   /* height: 45vh; */
   background-color: #35363e;
-  padding: 1em 1em;
+  padding: 0.7em 0.7em;
   border-radius: 40px;
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-  z-index: 1000000000;
+  z-index: 1000000;
 
   #add-btn {
     display: flex;
@@ -24,14 +24,14 @@
     width: 50px;
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.25 s;
+    transition: 0.3s;
   }
 
   .color-options {
     display: inherit;
     flex-direction: inherit;
     align-items: center;
-    gap: 0.8em;
+    gap: 0.65em;
     height: auto;
     overflow: auto;
   }

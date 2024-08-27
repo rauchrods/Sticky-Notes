@@ -1,13 +1,13 @@
 .color {
   background-color: grey;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .color:hover {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
 }

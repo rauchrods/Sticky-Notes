@@ -41,4 +41,10 @@ export const colors = [
     colorBody: "#AD49E1",
     colorText: "#EBD3F8",
   },
+  {
+    id: "color-9",
+    colorHeader: "#134B70",
+    colorBody: "#508C9B",
+    colorText: "#ffffff",
+  },
 ];

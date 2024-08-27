@@ -15,7 +15,7 @@ export function autoGrow(textAreaRef) {
 }
 
 export const setZIndex = (selectedCard) => {
-  selectedCard.style.zIndex = 999;
+  selectedCard.style.zIndex = 100000;
 
   Array.from(document.getElementsByClassName("card")).forEach((card) => {
     if (card !== selectedCard) {

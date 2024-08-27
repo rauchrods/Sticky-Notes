@@ -32,7 +32,7 @@ export const mainSlice = createSlice({
 
       localStorage.setItem(
         "savedNotes",
-        JSON.stringify({ notes: updatedNotes, activeColor: state.activeColor })
+        JSON.stringify({ ...state, notes: updatedNotes })
       );
       state.notes = updatedNotes;
     },
@@ -40,15 +40,12 @@ export const mainSlice = createSlice({
       state.notes[action.payload.$id - 1] = {
         ...action.payload,
       };
-      localStorage.setItem(
-        "savedNotes",
-        JSON.stringify({ notes: state.notes, activeColor: state.activeColor })
-      );
+      localStorage.setItem("savedNotes", JSON.stringify({ ...state }));
     },
     changeActiveColor: (state, action) => {
       localStorage.setItem(
         "savedNotes",
-        JSON.stringify({ notes: state.notes, activeColor: action.payload })
+        JSON.stringify({ ...state, activeColor: action.payload })
       );
       state.activeColor = action.payload;
     },
