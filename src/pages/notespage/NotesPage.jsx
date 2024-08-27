@@ -4,26 +4,31 @@ import { useSelector } from "react-redux";
 import InfoButton from "../../components/infoButton/InfoButton";
 import { useEffect, useState } from "react";
 import Modal from "../../components/modal/Modal";
+import { detectDevice } from "../../utils";
 
 const NotesPage = () => {
   const notes = useSelector((state) => state.main.notes);
 
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 600);
+  // const [isDesktop, setDesktop] = useState(window.innerWidth > 600);
 
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 600);
-  };
+  // const updateMedia = () => {
+  //   setDesktop(window.innerWidth > 600);
+  // };
+
+  const device = detectDevice();
 
   useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
+    // window.addEventListener("resize", updateMedia);
+    // return () => {
+    //   window.removeEventListener("resize", updateMedia);
+    // };
   }, []);
 
-  console.log("isDesktop", isDesktop);
+  // console.log("isDesktop", isDesktop);
 
   return (
     <>
-      {isDesktop ? (
+      {device === "isDesktop" ? (
         <>
           <InfoButton />
           {notes.map((note) => (

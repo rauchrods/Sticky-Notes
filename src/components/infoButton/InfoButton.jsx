@@ -10,8 +10,6 @@ const InfoButton = () => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  console.log("isModalVisible", isModalVisible);
-
   const showModalHandler = () => {
     setIsModalVisible((currState) => !currState);
   };
